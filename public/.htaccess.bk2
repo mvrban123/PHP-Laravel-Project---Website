@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+    RewriteBase /media/sf_practice/web_Foi/air_2022/obitelji3plus_crm
+
+    # Handle Authorization Header
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{REQUEST_URI} obitelji3plus_crm
+    RewriteRule ^(.*) https://%{SERVER_NAME}$1 [R,L]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

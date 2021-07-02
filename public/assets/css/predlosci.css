@@ -1,0 +1,69 @@
+
+.container1 {
+    display: inline-grid;
+    width: 90%;
+    margin-left: 3%;
+    grid-template-columns: 5fr 5fr;
+    grid-template-rows: 1fr 8fr 1fr;
+    gap: 1% 1%;
+    grid-template-areas:
+      "Naziv Kategorija"
+      "Unos Pregled"
+      "Gumb1 Gumb2"
+      "Gumb1 Gumb3";
+  }
+
+
+#Naziv {
+      grid-area: Naziv;
+      width: 100%;
+ }
+
+ #Kategorija {
+    grid-area: Kategorija;
+    width: 100%;
+}
+
+#Unos {
+    grid-area: Unos;
+    width: 100%;
+}
+
+#Pregled {
+    grid-area: Pregled;
+    width: 100%;
+    
+}
+
+#Gumb1 {
+    grid-area: Gumb1;
+    width: 30%;
+}
+
+#Gumb2 {
+    grid-area: Gumb2;
+    width: 100%;
+    align-items:flex-end;
+}
+
+#Gumb3 {
+    grid-area: Gumb3;
+    width: 100%;
+}
+
+#unosPredloska{
+    width: 100%;
+    height: 95%;
+}
+#pregledPredloska{
+    width: 100%;
+    border-style: groove;
+    height: 95%;
+}
+
+#nazivPredloska{
+    width: 100%;
+    height: 60%;
+}
+
+

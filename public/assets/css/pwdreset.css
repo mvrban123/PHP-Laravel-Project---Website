@@ -1,0 +1,19 @@
+#submit-new-pwd {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+#submit-new-pwd:hover {
+    cursor: pointer;
+    background-color: #28742b; /* Green */
+} 
+
+#submit-new-pwd:active {
+    background-color: #124714; /* Green */
+} 

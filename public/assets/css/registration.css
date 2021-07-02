@@ -1,0 +1,340 @@
+
+html, body, .container { height: 100%; margin: 0; }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-rows: 1fr 8fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Header Header Header"
+    ". Form ."
+    ". . .";
+}
+
+body{
+    background-color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+fieldset{
+    background-color: whitesmoke;
+    border: none;
+    margin-top: 2%;
+    border-radius: 5px;
+    
+}
+
+fieldset>p{
+    background-color: whitesmoke;
+    font-size: x-large;
+    margin-bottom: 20px;
+    position: inherit;
+    border-bottom: 2px solid  gray;
+
+}
+.Logo >img{
+    width: 8%;
+    float: left;
+}
+.Header { 
+    grid-area: Header;
+    text-align:center;
+    vertical-align:middle;
+    background-color: #f15a54;
+    background-image: linear-gradient(90deg, #f15a54 10%, #f18654 100%);
+    color:  white;
+    font-size: xx-large;
+}
+
+
+
+.formHolder { grid-area: Form;}
+
+input{
+    background-color: white;
+    outline: none;
+    display: block;
+    padding: 10px 0;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    width: 95%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: #444;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    z-index: -1;
+}
+
+input:focus, select:focus{
+    border: 2px solid black;
+}
+
+select{
+    background-color: white;
+    outline: none;
+    display: block;
+    padding: 10px 0;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    width: 97%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: #444;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+
+#skills, #notes,#skills2, #notes2 {
+    padding: 18px 0;
+    padding-left: 25px;
+}
+
+
+
+#singleParent, #notifications, #participation, #confirmation, #notifications2, #participation2, #confirmation2, #sameAddress, #rucniUnos, #rucniUnos2{
+    position: inherit;
+    display: inline-grid;
+    height: 20px;
+    width: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.Buttons > button, .brisiDjeteBtn{
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    background: #f95959;
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.Buttons >button:active, .Buttons >button:focus , .brisiDjeteBtn:active, .brisiDjeteBtn:focus{
+    border: 0; 
+    outline: 0;
+}
+
+.Buttons >button:hover{
+cursor: pointer;
+}
+
+.nextBtn{
+    float:right;
+}
+.backBtn{
+    float:left;
+}
+.CTA > input{
+    float: right;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    background: #f95959;
+    color: #fff;
+    border-radius: 30px;
+    margin-right: 20px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.CTA >input:active, .CTA >input:focus {
+    border: 0; 
+    outline: 0;
+}
+
+.CTA >input:hover{
+    cursor: pointer;
+    }
+
+.container *:after {
+  position: fit;
+  top: 0;
+  left: 0;
+}
+
+#Potvrde, #PodaciOAdresi, #OsobniPodaci,#OstaliOsobniPodaci,#UnosDjece, .CTA, #Potvrde2, #PodaciOAdresi2, #OsobniPodaci2,#OstaliOsobniPodaci2, #KorisnickiPodaci2, .AdreseRucno, .AdreseRucno2{
+    display:none;
+}
+
+.backBtn, #notes, #notes2{
+    visibility: hidden;
+}
+.addChildBtn{
+    visibility: hidden;
+}
+
+
+.ProgressBar{grid-area: ProgresBar;}
+
+.ProgressBar >.step{
+    display: inline-block;
+    width: 16%;
+    text-align: center;
+    
+}
+
+.ProgressBar >.step>.bullet{
+
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+#b1{
+    background-color:#f95959 ;
+    color: white;
+}
+
+
+#dodaj{
+    background-color: orange;
+}
+
+
+
+.containerChildren{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "inputiDjece tablica";
+
+}
+
+
+.inputiDjece{
+grid-area: inputiDjece;
+}
+
+#tablica{
+    grid-area: tablica;
+    background-color: white;
+    border: none;
+    border-radius: 5px;   
+}
+
+th,td{
+    text-align:center;
+    vertical-align:middle;
+
+}
+tr{
+    border-bottom: 5px solid whitesmoke;
+}
+
+/*NOVO*/
+
+.form-group i{
+	position: absolute;
+    visibility: hidden;
+}
+
+
+.form-group small {
+	color: #f95959;
+	visibility: hidden;
+    position: absolute;
+}
+
+
+
+
+@media screen and (max-width: 770px){
+    .containerChildren{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "tablica"
+          "inputiDjece";
+      
+      }
+    .Header {
+        font-size: x-large;
+    }
+
+    .ProgressBar >.step{
+        display: inline-block;
+        width: 15%;
+        text-align: center;
+        font-size: 15px;
+        margin-top: 5px;
+        
+    }
+
+    .form-group>input{
+        width: 85%;
+    }
+  
+    table{
+        width: 100%;
+    }
+    table, thead, tbody, th, td, tr { 
+		display: block; 
+    }
+    th{
+        display:none;
+    }
+    td { 
+		/* Behave  like a "row" */
+		border: none;
+		position: relative;
+		padding-left: 50%; 
+    }
+    tr{
+        border-bottom: 5px solid whitesmoke;
+    }
+    td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+    }
+    
+    td:nth-of-type(1):before { content: "Ime"; }
+    td:nth-of-type(2):before { content: "Prezime"; }
+    td:nth-of-type(3):before { content: "Datum"; }
+	td:nth-of-type(4):before { content: "OIB"; }
+    td:nth-of-type(5):before { content: "Briši"; }
+    td:nth-of-type(6):before { content: ""; }
+
+    #nameChild, #lastNameChild, #BirthChild, #OIBChild{
+        width: 85%;
+    }
+    .brisiDjeteBtn{
+        font-size: 12px;
+        text-transform: uppercase;
+        padding: 5px 15px;
+        background: #f95959;
+        color: #fff;
+        border-radius: 30px;
+        margin-right: 0px;
+        border: none;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    fieldset>p{
+        font-size: larger;
+    }
+    select{
+        width: 94%;
+    }
+    .step>p{
+        display: none;
+    }
+    .containerChildren{
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+}
